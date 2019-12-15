@@ -4,23 +4,23 @@ function moveBallAndMaintainPaddles() {
     ball.position.x += xDir;
     ball.position.y += yDir;
 
-    if (Key.isDown(Key.A)) {
+    if (Key.isDown(Key.LEFT)) {
         if (!(paddle1.position.x <= -3.5)) {
             paddle1.position.x -= PLAYERSPEED;
         }
     }
-    else if (Key.isDown(Key.D)) {
+    else if (Key.isDown(Key.RIGHT)) {
         if (!(paddle1.position.x >= 3.5)) {
             paddle1.position.x += PLAYERSPEED;
         }
     }
 
-    if (Key.isDown(Key.LEFT)) {
+    if (Key.isDown(Key.A)) {
         if (!(paddle2.position.x <= -3.5)) {
             paddle2.position.x -= COMPSPEED;
         }
     }
-    else if (Key.isDown(Key.RIGHT)) {
+    else if (Key.isDown(Key.D)) {
         if (!(paddle2.position.x >= 3.5)) {
             paddle2.position.x += COMPSPEED;
         }
