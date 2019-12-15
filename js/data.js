@@ -6,6 +6,7 @@ var HEIGHT;					// tinggi layar
 var COMPSPEED = 0.15;		// player 2
 var PLAYERSPEED = 0.15;		// player 1
 var BALLSPEED = 0.22;		// bola 
+var CAMSPEED = 0.1;
 var xDir = 0.03;			// arah x bola
 var yDir = BALLSPEED;		// arah y bola
 var scoreObject1;			// skor player 1
