@@ -431,18 +431,32 @@ function updateCrowd() {
 // var angle = 0
 // 	radius = 10;
 var pause=0;
-
+var flag=0;
 // Render loop continuously updates screen at 60 FPS
 function render() {
 
-    
+    console.log(pause,flag);
     //pause
-    if(Key.isDown(Key.ENTER)){
-        alert("Paused");
-        // console.log("hai");
-        Key.onKeyup(Key.ENTER);
-    }
+    // if(flag==0){
+    //     if(Key.isDown(Key.ENTER)){
+    //         if(pause==0)
+    //         {
+    //             alert("Paused");
+    //             flag=1
+    //             pause=1;
+    //         }
+    //         // pause =2;
+    //     }
+    // }
+    // else{
+    //     if(Key.isDown(Key.SPACE))
+    //     {
+    //         pause=0;
+    //         flag=0;
+    //     }
+    // }
     
+
 
     if (crowdCounter % 10 == 0) {
         updateCrowd();
@@ -463,7 +477,23 @@ function render() {
             updateCrowd();
             alert("Player 2 scored !! Press space to continue");
         }
-        requestAnimationFrame(render);
+
+        if(Key.isDown(Key.ENTER)){
+            if(pause==0)
+            {
+                pause=1;
+                alert("Paused");
+                requestAnimationFrame(render);    
+            }
+            else{
+                requestAnimationFrame(render);
+            }
+
+        }
+        else{
+            pause=0;
+            requestAnimationFrame(render);
+        }
         renderer.render(scene, camera);
         p1ScoreOld = p1Score;
         p2ScoreOld = p2Score;
