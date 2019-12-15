@@ -3,13 +3,15 @@ var scene;					// Objek three.js
 var camera;
 var WIDTH;					// lebar layar
 var HEIGHT;					// tinggi layar
-var COMPSPEED = 0.25;		// player 2
-var PLAYERSPEED = 0.25;		// player 1
+var COMPSPEED = 0.15;		// player 2
+var PLAYERSPEED = 0.15;		// player 1
 var BALLSPEED = 0.22;		// bola 
 var xDir = 0.03;			// arah x bola
 var yDir = BALLSPEED;		// arah y bola
 var scoreObject1;			// skor player 1
+var scoreObject1A;			// skor player 1
 var scoreObject2;			// skor player 2
+var scoreObject2A;			// skor player 2
 var p1Score = "00";			// skor baru p1
 var p2Score = "00";			// skor baru p2
 var p1ScoreOld;				// skor lama p1
