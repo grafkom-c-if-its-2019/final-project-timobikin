@@ -512,8 +512,8 @@ function onDocumentTouchMove(event) {
 }
 // init scene
 function init() {
-    WIDTH = (window.innerWidth);
-    HEIGHT = window.innerHeight;
+    WIDTH = (window.innerWidth)*0.99;
+    HEIGHT = (window.innerHeight)*0.965;
 
     loadSounds();
 
