@@ -512,34 +512,25 @@ function onDocumentTouchMove(event) {
 }
 // init scene
 function init() {
-    WIDTH = (window.innerWidth) * 0.97;
+    WIDTH = (window.innerWidth);
     HEIGHT = window.innerHeight;
 
     loadSounds();
 
     scene = new THREE.Scene();
 
-    // camera = new THREE.PerspectiveCamera( 35, WIDTH / HEIGHT, 5, 100 );
-    // camera.position.x = 0; //0
-    // camera.position.y = -25; //-25
-    // camera.position.z = 10; //10
-    // camera.lookAt( scene.position );
-
-    camera = new THREE.PerspectiveCamera(35, WIDTH / HEIGHT, 5, 100);
+    camera = new THREE.PerspectiveCamera(40, WIDTH / HEIGHT, 5, 100);
     camera.position.set(0, -25, 10);
     // camera.position.x = 0;
     // camera.position.y = -25;
     // camera.position.z = 10;
     camera.lookAt(scene.position);
 
-    topCamera = new THREE.PerspectiveCamera(35, WIDTH / HEIGHT, 5, 100);
+    topCamera = new THREE.PerspectiveCamera(40, WIDTH / HEIGHT, 5, 100);
     topCamera.position.set(0, 25, 10);
     // topCamera.position.x = 0;
     // topCamera.position.y = 25;
     // topCamera.position.z = 10;
-    // topCamera.rotation.y = 180 * (Math.PI / 180);
-    // topCamera.rotateOnAxis(180 * Math.PI / 180);
-    // topCamera.lookAt (scene.position);
     topCamera.up = new THREE.Vector3(0, 0, 1);
     topCamera.lookAt(new THREE.Vector3(0, 0, 0));
 
