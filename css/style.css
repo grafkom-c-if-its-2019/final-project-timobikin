@@ -524,6 +524,38 @@ img {
         font-size: 12px;
         text-transform: uppercase; }
 
+
+.home_banner_area1 {
+  z-index: 1;
+  background: url(../img/banner/pingpong.jpg) no-repeat center center;
+  background-size: cover; }
+  .home_banner_area .banner_inner {
+    width: 100%; }
+    .home_banner_area .banner_inner .home_left_img {
+      padding-top: 230px;
+      padding-bottom: 230px; }
+    .home_banner_area .banner_inner .col-lg-6 {
+      vertical-align: middle;
+      align-self: center; }
+    .home_banner_area .banner_inner .banner_content {
+      text-align: left;
+      color: #fff;
+      margin-left: 70px; }
+      .home_banner_area .banner_inner .banner_content h2 {
+        margin-top: 0px;
+        font-size: 60px;
+        font-weight: bold;
+        line-height: 72px;
+        margin-bottom: 20px; }
+      .home_banner_area .banner_inner .banner_content p {
+        color: #fff;
+        font-size: 16px;
+        margin-bottom: 20px; }
+      .home_banner_area .banner_inner .banner_content .watch_video {
+        margin: 0 30px;
+        font-size: 12px;
+        text-transform: uppercase; }
+
 .blog_banner {
   min-height: 780px;
   position: relative;
