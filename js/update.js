@@ -450,6 +450,14 @@ function updateCrowd() {
             }
     }
 }
+
+function reset() {
+    this._pressed[37] = false;
+    this._pressed[39] = false;
+    this._pressed[65] = false;
+    this._pressed[68] = false;
+}
+
 // var angle = 0
 // 	radius = 10;
 var pause=0;
@@ -457,28 +465,7 @@ var flag=0;
 // Render loop continuously updates screen at 60 FPS
 function render() {
 
-    console.log(pause,flag);
-    //pause
-    // if(flag==0){
-    //     if(Key.isDown(Key.ENTER)){
-    //         if(pause==0)
-    //         {
-    //             alert("Paused");
-    //             flag=1
-    //             pause=1;
-    //         }
-    //         // pause =2;
-    //     }
-    // }
-    // else{
-    //     if(Key.isDown(Key.SPACE))
-    //     {
-    //         pause=0;
-    //         flag=0;
-    //     }
-    // }
-    
-
+    // console.log(pause,flag);
 
     if (crowdCounter % 10 == 0) {
         updateCrowd();
@@ -516,6 +503,7 @@ function render() {
             updateScore();
             updateCrowd();
             alert("Player 2 scored !! Press any key to continue");
+            // reset();
         }
 
         renderer.render(scene, camera);
