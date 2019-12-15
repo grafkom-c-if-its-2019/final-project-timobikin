@@ -3,8 +3,8 @@ var scene;					// Objek three.js
 var camera;
 var WIDTH;					// lebar layar
 var HEIGHT;					// tinggi layar
-var COMPSPEED = 0.25;		// player 2
-var PLAYERSPEED = 0.25;		// player 1
+var COMPSPEED = 0.15;		// player 2
+var PLAYERSPEED = 0.15;		// player 1
 var BALLSPEED = 0.22;		// bola 
 var xDir = 0.03;			// arah x bola
 var yDir = BALLSPEED;		// arah y bola

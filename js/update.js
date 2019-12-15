@@ -15,12 +15,12 @@ function moveBallAndMaintainPaddles() {
         }
     }
 
-    if (Key.isDown(Key.A)) {
+    if (Key.isDown(Key.D)) {
         if (!(paddle2.position.x <= -3.5)) {
             paddle2.position.x -= COMPSPEED;
         }
     }
-    else if (Key.isDown(Key.D)) {
+    else if (Key.isDown(Key.A)) {
         if (!(paddle2.position.x >= 3.5)) {
             paddle2.position.x += COMPSPEED;
         }
