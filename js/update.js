@@ -224,6 +224,7 @@ function updateScore() {
         BALLSPEED = 0;
         yDir = 0
         xDir = 0;
+        location.replace("index.html")
     }
 }
 // Udates the crowd. Normal speedsimulates random movement. Fast speed for point scored.
