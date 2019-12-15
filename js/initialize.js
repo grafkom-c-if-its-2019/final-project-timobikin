@@ -146,6 +146,14 @@ function loadSounds() {
     four = new Audio('assets/4.mp3');
     bg = new Audio('assets/bg-song.mp3');
 }
+
+//border
+var geometry = new THREE.BoxGeometry( 1, 1, 1 );
+var material = new THREE.MeshBasicMaterial( {color: 0x00ff00} );
+var cube = new THREE.Mesh( geometry, material );
+scene.add( cube );
+
+
 // buat papan pong
 function createScoreBoard() {
     var planeGeometry = new THREE.PlaneGeometry(15, 6, 10, 10);
