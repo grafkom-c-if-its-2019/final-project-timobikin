@@ -248,7 +248,7 @@ function updateScore() {
         BALLSPEED = 0;
         yDir = 0
         xDir = 0;
-        // location.replace("index.html")
+        location.replace("index.html");
     }
 }
 // Udates the crowd. Normal speedsimulates random movement. Fast speed for point scored.
@@ -430,14 +430,19 @@ function updateCrowd() {
 }
 // var angle = 0
 // 	radius = 10;
-
+var pause=0;
 
 // Render loop continuously updates screen at 60 FPS
 function render() {
-    // angle+=0.01;
-    // camera.lookAt(scene.position);
-    // camera.position.x = radius * Math.sin( angle );  
-    // camera.position.y = radius * Math.sin( angle );
+
+    
+    //pause
+    if(Key.isDown(Key.ENTER)){
+        alert("Paused");
+        // console.log("hai");
+        Key.onKeyup(Key.ENTER);
+    }
+    
 
     if (crowdCounter % 10 == 0) {
         updateCrowd();
@@ -448,9 +453,15 @@ function render() {
         bg.volume = 0.3;
         bg.play();
         moveBallAndMaintainPaddles();
-        if (p1Score != p1ScoreOld || p2Score != p2ScoreOld) {
+        if (p1Score != p1ScoreOld) {
             updateScore();
             updateCrowd();
+            alert("Player 1 scored !! Press space to continue");
+        }
+        if (p2Score != p2ScoreOld) {
+            updateScore();
+            updateCrowd();
+            alert("Player 2 scored !! Press space to continue");
         }
         requestAnimationFrame(render);
         renderer.render(scene, camera);
