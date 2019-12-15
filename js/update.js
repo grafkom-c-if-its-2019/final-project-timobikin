@@ -25,7 +25,29 @@ function moveBallAndMaintainPaddles() {
             paddle2.position.x += COMPSPEED;
         }
     }
+//camera
+    if (Key.isDown(Key.D)) {
+        if (!(topCamera.position.x <= -3.5)) {
+            topCamera.position.x -= CAMSPEED;
+        }
+    }
+    else if (Key.isDown(Key.A)) {
+        if (!(topCamera.position.x >= 3.5)) {
+            topCamera.position.x += CAMSPEED;
+        }
+    }
 
+    if (Key.isDown(Key.LEFT)) {
+        if (!(camera.position.x <= -3.5)) {
+            camera.position.x -= CAMSPEED;
+        }
+    }
+    else if (Key.isDown(Key.RIGHT)) {
+        if (!(camera.position.x >= 3.5)) {
+            camera.position.x += CAMSPEED;
+        }
+    }
+//end camera
     if (ball.position.x <= -4) {
         ball.position.x = -3.9;
         xDir = -xDir;
@@ -463,20 +485,6 @@ function render() {
     }
 
     if (p1ScoreOld < 10 && p2ScoreOld < 10) {
-        bg.loop = true;
-        bg.volume = 0.3;
-        bg.play();
-        moveBallAndMaintainPaddles();
-        if (p1Score != p1ScoreOld) {
-            updateScore();
-            updateCrowd();
-            alert("Player 1 scored !! Press any key to continue");
-        }
-        if (p2Score != p2ScoreOld) {
-            updateScore();
-            updateCrowd();
-            alert("Player 2 scored !! Press any key to continue");
-        }
 
         if(Key.isDown(Key.ENTER)){
             if(pause==0)
@@ -494,6 +502,22 @@ function render() {
             pause=0;
             requestAnimationFrame(render);
         }
+
+        bg.loop = true;
+        bg.volume = 0.3;
+        bg.play();
+        moveBallAndMaintainPaddles();
+        if (p1Score != p1ScoreOld) {
+            updateScore();
+            updateCrowd();
+            alert("Player 1 scored !! Press any key to continue");
+        }
+        else if (p2Score != p2ScoreOld) {
+            updateScore();
+            updateCrowd();
+            alert("Player 2 scored !! Press any key to continue");
+        }
+
         renderer.render(scene, camera);
         p1ScoreOld = p1Score;
         p2ScoreOld = p2Score;
