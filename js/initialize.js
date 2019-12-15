@@ -144,6 +144,7 @@ function loadSounds() {
     two = new Audio('assets/2.mp3');
     three = new Audio('assets/3.mp3');
     four = new Audio('assets/4.mp3');
+    bg = new Audio('assets/bg-song.mp3');
 }
 // buat papan pong
 function createScoreBoard() {
