@@ -406,12 +406,14 @@ function updateCrowd() {
 // var angle = 0
 // 	radius = 10;
 
+
 // Render loop continuously updates screen at 60 FPS
 function render() {
     // angle+=0.01;
     // camera.lookAt(scene.position);
     // camera.position.x = radius * Math.sin( angle );  
     // camera.position.y = radius * Math.sin( angle );
+
     if (crowdCounter % 10 == 0) {
         updateCrowd();
     }
