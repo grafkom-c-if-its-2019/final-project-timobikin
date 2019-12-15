@@ -197,10 +197,10 @@ function updateScore() {
         });
     var scoreObjectMaterial1 = new THREE.MeshLambertMaterial({ color: 0xFF0022 });
     scoreObject1 = new THREE.Mesh(scoreObjectGeometry1, scoreObjectMaterial1);
-    scoreObject1.position.x = -9.5;
-    scoreObject1.position.y = 5;
-    scoreObject1.position.z = 0.60;
-    scoreObject1.rotation.x = 25 * Math.PI / 180;
+    scoreObject1.position.x = -1.5;
+    scoreObject1.position.y = 22;
+    scoreObject1.position.z = 2;
+    scoreObject1.rotation.x = 60 * Math.PI / 180;
     scene.add(scoreObject1);
 
     var scoreObjectGeometry2 = new THREE.TextGeometry(p2Score,
@@ -212,10 +212,11 @@ function updateScore() {
         });
     var scoreObjectMaterial2 = new THREE.MeshLambertMaterial({ color: 0x0022FF });
     scoreObject2 = new THREE.Mesh(scoreObjectGeometry2, scoreObjectMaterial2);
-    scoreObject2.position.x = 6.5;
-    scoreObject2.position.y = 5;
-    scoreObject2.position.z = 0.60;
-    scoreObject2.rotation.x = 25 * Math.PI / 180;
+    scoreObject2.position.x = 1.5;
+    scoreObject2.position.y = -22;
+    scoreObject2.position.z = 2;
+    scoreObject2.rotation.x = 120 * Math.PI / 180;
+    scoreObject2.rotation.y = 180 * Math.PI/180;
     scene.add(scoreObject2);
 
     if (p1Score == 10 || p2Score == 10) {

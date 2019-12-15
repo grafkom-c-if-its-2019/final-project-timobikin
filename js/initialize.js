@@ -150,19 +150,20 @@ function createScoreBoard() {
     var planeGeometry = new THREE.PlaneGeometry(5, 5, 10, 10);
     var planeMaterial = new THREE.MeshLambertMaterial({ color: 0xDDDDDD });
     var scoreBoard1 = new THREE.Mesh(planeGeometry, planeMaterial);
-    scoreBoard1.position.x = -8;
-    scoreBoard1.position.y = 6;
-    scoreBoard1.position.z = 1;
-    scoreBoard1.rotation.x = 25 * Math.PI / 180;
+    scoreBoard1.position.x = 0;
+    scoreBoard1.position.y = 22;
+    scoreBoard1.position.z = 2;
+    scoreBoard1.rotation.x = 60 * Math.PI / 180;
     scene.add(scoreBoard1);
 
     var planeGeometry = new THREE.PlaneGeometry(5, 5, 10, 10);
     var planeMaterial = new THREE.MeshLambertMaterial({ color: 0xDDDDDD });
     var scoreBoard2 = new THREE.Mesh(planeGeometry, planeMaterial);
-    scoreBoard2.position.x = 8;
-    scoreBoard2.position.y = 6;
-    scoreBoard2.position.z = 1;
-    scoreBoard2.rotation.x = 25 * Math.PI / 180;
+    scoreBoard2.position.x = 0;
+    scoreBoard2.position.y = -22;
+    scoreBoard2.position.z = 2;
+    scoreBoard2.rotation.x = 120 * Math.PI / 180;
+    scoreBoard2.rotation.y = 180 * Math.PI / 180;
     scene.add(scoreBoard2);
 
     var textGeometry1 = new THREE.TextGeometry("Player Score",
@@ -174,10 +175,10 @@ function createScoreBoard() {
         });
     var textMaterial1 = new THREE.MeshLambertMaterial({ color: 0xFF0022 });
     var scoreLabel1 = new THREE.Mesh(textGeometry1, textMaterial1);
-    scoreLabel1.position.x = -9.5;
-    scoreLabel1.position.y = 7.5;
-    scoreLabel1.position.z = 1.8;
-    scoreLabel1.rotation.x = 45 * Math.PI / 180;
+    scoreLabel1.position.x = -1.5;
+    scoreLabel1.position.y = 17;
+    scoreLabel1.position.z = 2;
+    scoreLabel1.rotation.x = 60 * Math.PI / 180;
     scene.add(scoreLabel1);
 
     var textGeometry2 = new THREE.TextGeometry("Computer Score",
@@ -189,10 +190,11 @@ function createScoreBoard() {
         });
     var textMaterial2 = new THREE.MeshLambertMaterial({ color: 0x0022FF });
     var scoreLabel2 = new THREE.Mesh(textGeometry2, textMaterial2);
-    scoreLabel2.position.x = 6;
-    scoreLabel2.position.y = 7.5;
-    scoreLabel2.position.z = 1.8;
-    scoreLabel2.rotation.x = 45 * Math.PI / 180;
+    scoreLabel2.position.x = 2;
+    scoreLabel2.position.y = -17;
+    scoreLabel2.position.z = 2;
+    scoreLabel2.rotation.x = 120 * Math.PI / 180;
+    scoreLabel2.rotation.y = 180 * Math.PI / 180;
     scene.add(scoreLabel2);
 }
 // buat penonton
