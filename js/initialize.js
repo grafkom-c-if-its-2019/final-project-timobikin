@@ -167,7 +167,7 @@ function createScoreBoard() {
     scoreBoard2.rotation.y = 180 * Math.PI / 180;
     scene.add(scoreBoard2);
 
-    var textGeometry1 = new THREE.TextGeometry("Player 1 Score",
+    var textGeometry1 = new THREE.TextGeometry("Player 1",
         {
             size: 1,
             height: 0.2,
@@ -176,13 +176,21 @@ function createScoreBoard() {
         });
     var textMaterial1 = new THREE.MeshLambertMaterial({ color: 0xFF0022 });
     var scoreLabel1 = new THREE.Mesh(textGeometry1, textMaterial1);
-    scoreLabel1.position.x = -4.5;
+    scoreLabel1.position.x = -5.5;
     scoreLabel1.position.y = 17;
     scoreLabel1.position.z = 2;
     scoreLabel1.rotation.x = 60 * Math.PI / 180;
     scene.add(scoreLabel1);
 
-    var textGeometry2 = new THREE.TextGeometry("Player 2 Score",
+    var scoreLabel1A = new THREE.Mesh(textGeometry1, textMaterial1);
+    scoreLabel1A.position.x = -0.5;
+    scoreLabel1A.position.y = -17;
+    scoreLabel1A.position.z = 2;
+    scoreLabel1A.rotation.x = 120 * Math.PI / 180;
+    scoreLabel1A.rotation.y = 180 * Math.PI / 180;
+    scene.add(scoreLabel1A);
+
+    var textGeometry2 = new THREE.TextGeometry("Player 2",
         {
             size: 1,
             height: 0.2,
@@ -191,12 +199,19 @@ function createScoreBoard() {
         });
     var textMaterial2 = new THREE.MeshLambertMaterial({ color: 0x0022FF });
     var scoreLabel2 = new THREE.Mesh(textGeometry2, textMaterial2);
-    scoreLabel2.position.x = 4.5;
+    scoreLabel2.position.x = 5.5;
     scoreLabel2.position.y = -17;
     scoreLabel2.position.z = 2;
     scoreLabel2.rotation.x = 120 * Math.PI / 180;
     scoreLabel2.rotation.y = 180 * Math.PI / 180;
     scene.add(scoreLabel2);
+
+    var scoreLabel2A = new THREE.Mesh(textGeometry2, textMaterial2);
+    scoreLabel2A.position.x = 0.5;
+    scoreLabel2A.position.y = 17;
+    scoreLabel2A.position.z = 2;
+    scoreLabel2A.rotation.x = 60 * Math.PI / 180;
+    scene.add(scoreLabel2A);
 }
 // buat penonton
 function createCrowd() {
