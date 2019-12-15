@@ -81,16 +81,19 @@ function moveBallAndMaintainPaddles() {
             switch (applause) {
                 case 1:
                     {
+                        applause1.volume = 0.2;                        
                         applause1.play();
                         break;
                     }
                 case 2:
                     {
+                        applause2.volume = 0.2;
                         applause2.play();
                         break;
                     }
                 default:
                     {
+                        applause3.volume = 0.2;
                         applause3.play();
                     }
             }
@@ -140,16 +143,19 @@ function moveBallAndMaintainPaddles() {
             switch (applause) {
                 case 1:
                     {
+                        applause1.volume = 0.2;
                         applause1.play();
                         break;
                     }
                 case 2:
                     {
+                        applause2.volume = 0.2;
                         applause2.play();
                         break;
                     }
                 default:
                     {
+                        applause3.volume = 0.2;
                         applause3.play();
                     }
             }
@@ -421,6 +427,9 @@ function render() {
     }
 
     if (p1ScoreOld < 10 && p2ScoreOld < 10) {
+        bg.loop = true;
+        bg.volume = 0.3;
+        bg.play();
         moveBallAndMaintainPaddles();
         if (p1Score != p1ScoreOld || p2Score != p2ScoreOld) {
             updateScore();
@@ -432,7 +441,10 @@ function render() {
         p2ScoreOld = p2Score;
         crowdCounter++;
     }
-
+    else {
+        bg.loop = false;
+        bg.pause();
+    }
     var SCREEN_W, SCREEN_H;
     SCREEN_W = window.innerWidth;
     SCREEN_H = window.innerHeight;
