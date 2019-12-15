@@ -470,12 +470,12 @@ function render() {
         if (p1Score != p1ScoreOld) {
             updateScore();
             updateCrowd();
-            alert("Player 1 scored !! Press space to continue");
+            alert("Player 1 scored !! Press any key to continue");
         }
         if (p2Score != p2ScoreOld) {
             updateScore();
             updateCrowd();
-            alert("Player 2 scored !! Press space to continue");
+            alert("Player 2 scored !! Press any key to continue");
         }
 
         if(Key.isDown(Key.ENTER)){
