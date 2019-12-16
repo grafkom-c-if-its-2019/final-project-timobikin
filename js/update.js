@@ -502,13 +502,13 @@ function render() {
             updateScore();
             updateCrowd();
             BALLSPEED = 0.22;		// bola 
-            // alert("Player 1 scored !! Press any key to continue");
+            // alert("Player 1 scored !! \nPress any key to continue");
         }
         else if (p2Score != p2ScoreOld) {
             updateScore();
             updateCrowd();
             BALLSPEED = 0.22;		// bola 
-            // alert("Player 2 scored !! Press any key to continue");
+            // alert("Player 2 scored !! \nPress any key to continue");
             // reset();
         }
 
@@ -518,6 +518,12 @@ function render() {
         crowdCounter++;
     }
     else {
+        if(p1Score==10){
+            alert("Player 1 Wins");
+        }
+        else if(p2Score==10){
+            alert("Player 2 Wins");
+        }
         bg.loop = false;
         bg.pause();
     }
