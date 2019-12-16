@@ -62,7 +62,7 @@ function moveBallAndMaintainPaddles() {
     if (ball.position.y < -8.5 && yDir < 0) {
         yDir = BALLSPEED;
         BALLSPEED+=0.01
-        console.log(BALLSPEED);
+        // console.log(BALLSPEED);
 
         var paddleCollisionDetect = Math.abs(paddle1.position.x - ball.position.x);
         if (paddleCollisionDetect <= 1.45) {
@@ -161,7 +161,7 @@ function moveBallAndMaintainPaddles() {
             ball.position.x = paddle2.position.x;
             ball.position.y = 8;
             p1Score++;
-            PLAYERSPEED -= 0.002;
+            // PLAYERSPEED -= 0.002;
             var applause = Math.floor((Math.random() * 3) + 1);
             // <!-- Sound FX provided by SoundBible.com and were not altered. -->
             switch (applause) {
@@ -499,12 +499,12 @@ function render() {
         if (p1Score != p1ScoreOld) {
             updateScore();
             updateCrowd();
-            alert("Player 1 scored !! Press any key to continue");
+            // alert("Player 1 scored !! Press any key to continue");
         }
         else if (p2Score != p2ScoreOld) {
             updateScore();
             updateCrowd();
-            alert("Player 2 scored !! Press any key to continue");
+            // alert("Player 2 scored !! Press any key to continue");
             // reset();
         }
 
