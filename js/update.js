@@ -61,6 +61,7 @@ function moveBallAndMaintainPaddles() {
     var paddleCollisionDetect = Math.abs(paddle2.position.x - ball.position.x);
     if (ball.position.y < -8.5 && yDir < 0) {
         yDir = BALLSPEED;
+        BALLSPEED+=0.001
 
         var paddleCollisionDetect = Math.abs(paddle1.position.x - ball.position.x);
         if (paddleCollisionDetect <= 1.45) {
@@ -466,7 +467,7 @@ var flag=0;
 function render() {
 
     // console.log(pause,flag);
-
+    
     if (crowdCounter % 10 == 0) {
         updateCrowd();
     }
