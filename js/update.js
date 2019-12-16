@@ -475,7 +475,7 @@ function render() {
     }
 
     if (p1ScoreOld < 10 && p2ScoreOld < 10) {
-        console.log(BALLSPEED);
+        // console.log(BALLSPEED);
 
         if(Key.isDown(Key.ENTER)){
             if(pause==0)
