@@ -469,11 +469,13 @@ function render() {
 
     // console.log(pause,flag);
     
+    
     if (crowdCounter % 10 == 0) {
         updateCrowd();
     }
 
     if (p1ScoreOld < 10 && p2ScoreOld < 10) {
+        console.log(BALLSPEED);
 
         if(Key.isDown(Key.ENTER)){
             if(pause==0)
@@ -499,11 +501,13 @@ function render() {
         if (p1Score != p1ScoreOld) {
             updateScore();
             updateCrowd();
+            BALLSPEED = 0.22;		// bola 
             // alert("Player 1 scored !! Press any key to continue");
         }
         else if (p2Score != p2ScoreOld) {
             updateScore();
             updateCrowd();
+            BALLSPEED = 0.22;		// bola 
             // alert("Player 2 scored !! Press any key to continue");
             // reset();
         }
